@@ -13,7 +13,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final nameController = TextEditingController();
+  final mailidController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
@@ -23,10 +23,10 @@ class _LoginState extends State<Login> {
       child: Column(
         children: [
           TextField(
-              controller: nameController,
+              controller: mailidController,
               textAlign: TextAlign.center,
               decoration: InputDecoration(
-                hintText: 'Enter your name',
+                hintText: 'Enter your mailid',
               )),
           TextField(
               controller: passwordController,
@@ -41,11 +41,11 @@ class _LoginState extends State<Login> {
                 Map user = {};
                 setState(() {
                   user = {
-                    "name": nameController.text,
+                    "name": mailidController.text,
                     "password": passwordController.text
                   };
                 });
-                var storedObject = prefs.getString(nameController.text);
+                var storedObject = prefs.getString(mailidController.text);
                 print(storedObject);
                 if (storedObject != null) {
                   var temp = json.decode(storedObject);

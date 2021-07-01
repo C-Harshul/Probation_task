@@ -32,7 +32,7 @@ class _MovieDetailsState extends State<MovieDetails> {
       },
       body: jsonEncode(<String, String>{
         "category": "movies",
-        "language": "hindi",
+        "language": "kannada",
         "genre": "all",
         "sort": "voting"
       }),
